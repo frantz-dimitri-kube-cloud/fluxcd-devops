@@ -8,6 +8,5 @@ spec:
   ref:
     branch: main
   secretRef:
-    name: flux-system
-    namespace: flux-system
-  url: https://github.com/frantz-dimitri-kube-cloud/react-ci-cd-app.git
+    name: flux-git
+  url: https://github.com/frantz-dimitri-kube-cloud/react-ci-cd.git

@@ -1,4 +1,4 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta2
+apiVersion: image.toolkit.fluxcd.io/v1
 kind: ImagePolicy
 metadata: 
   name: react-ci-cd-policy
@@ -6,6 +6,7 @@ metadata:
 spec: 
   imageRepositoryRef:
     name: react-ci-cd-app-img-repo
+    namespace: flux-system
   policy:
     semver: 
       range: "1.0.x"
