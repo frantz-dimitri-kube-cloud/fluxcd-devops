@@ -17,7 +17,7 @@ spec:
       author:
         email: fluxcdbot@users.noreply.github.com
         name: fluxcdbot
-      messageTemplate: 'fluxcdbot: update image to {{range .Changed.Images}}{{println .}}{{end}}'
+      messageTemplate: 'fluxcdbot: update image to {{range .Changed.CollatedChanges}}{{println .}}{{end}}'
     push:
       branch: main
   update:
