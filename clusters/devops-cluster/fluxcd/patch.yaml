@@ -6,6 +6,7 @@ metadata:
 spec: 
   interval: 1m0s
   path: "./k8s/"
+  prune: true
   sourceRef:
     kind: GitRepository
     name: react-ci-cd-app
