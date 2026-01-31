@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: react-ci-cd-app
-  targetNamespace: flux-system
+  targetNamespace: default
   # Debut du patch
   # patches:
   #   - patch: |-
