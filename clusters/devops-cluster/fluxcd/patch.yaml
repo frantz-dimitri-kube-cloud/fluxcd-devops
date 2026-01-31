@@ -12,16 +12,26 @@ spec:
     name: react-ci-cd-app
   targetNamespace: flux-system
   # Debut du patch
-  patches:
-    - patch: |-
-        apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-          namespace: default
-          name: react-ci-cd-deployment
-        spec:
-          replicas: 3
+  # patches:
+  #   - patch: |-
+  #       apiVersion: apps/v1
+  #       kind: Deployment
+  #       metadata:
+  #         namespace: default
+  #         name: react-ci-cd-deployment
+  #       spec:
+  #         replicas: 3
+  #     target:
+  #       kind: Deployment
+  #       name: react-ci-cd-deployment
+  #       namespace: default 
+
+patches:
+    - patch: |
+        - op: replace
+          path: /spec/replicas
+          value: 3
       target:
         kind: Deployment
         name: react-ci-cd-deployment
-        namespace: default 
+        namespace: default
