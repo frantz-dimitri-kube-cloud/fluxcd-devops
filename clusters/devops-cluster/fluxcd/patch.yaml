@@ -26,12 +26,12 @@ spec:
   #       name: react-ci-cd-deployment
   #       namespace: default
   patches:
-      - patch: |
-          - op: replace
-            path: /spec
-            value:
-              replicas: 3
-        target:
-          kind: Deployment
-          name: react-ci-cd-deployment
-          namespace: default
+    - patch: |
+        - op: replace
+          path: /spec
+          value:
+            replicas: 3
+      target:
+        kind: Deployment
+        name: react-ci-cd-deployment
+        namespace: default
