@@ -29,8 +29,9 @@ spec:
 patches:
     - patch: |
         - op: replace
-          path: /spec/replicas
-          value: 3
+          path: /spec
+          value:
+            replicas: 3
       target:
         kind: Deployment
         name: react-ci-cd-deployment
