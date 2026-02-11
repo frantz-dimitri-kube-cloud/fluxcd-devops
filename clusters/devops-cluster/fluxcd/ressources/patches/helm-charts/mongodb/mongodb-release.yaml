@@ -8,10 +8,9 @@ spec:
   chart:
     spec:
       chart: mongodb
-      version: "18.x.x" # On accepte n'importe quelle version 18 de Bitnami
       sourceRef:
-        kind: HelmRepository
-        name: bitnami
+        kind: OCIRepository
+        name: bitnami-mongodb
         namespace: flux-system
   interval: 1m
   install:
