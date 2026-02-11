@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
   - react-infra-kusto.yaml
-  - k8s/kustomization.yaml
+  - k8s
