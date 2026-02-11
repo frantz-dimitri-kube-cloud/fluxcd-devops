@@ -11,14 +11,5 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  targetNamespace: default
-  patches:
-    - patch: |
-        - op: replace
-          path: /spec/replicas
-          value: 4
-      target:
-        kind: Deployment
-        name: react-ci-cd-deployment
-        namespace: default
+  targetNamespace: database
   
