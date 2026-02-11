@@ -5,11 +5,11 @@ metadata:
   namespace: flux-system
 spec: 
   interval: 1m0s
-  path: "./k8s/"
+  path: "./clusters/devops-cluster/fluxcd/ressources/patches/k8s-resources/k8s"
   prune: true
   sourceRef:
     kind: GitRepository
-    name: react-ci-cd-app
+    name: flux-system
     namespace: flux-system
   targetNamespace: default
   patches:

@@ -1,0 +1,24 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata: 
+  name: mongodb-helm-chart
+  namespace: flux-system
+spec: 
+  interval: 1m0s
+  path: "./clusters/devops-cluster/fluxcd/ressources/patches/helm-charts/mongodb/kustomization.yaml"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  targetNamespace: default
+  patches:
+    - patch: |
+        - op: replace
+          path: /spec/replicas
+          value: 4
+      target:
+        kind: Deployment
+        name: react-ci-cd-deployment
+        namespace: default
+  
