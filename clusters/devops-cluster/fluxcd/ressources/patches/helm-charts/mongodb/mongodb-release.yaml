@@ -9,7 +9,7 @@ spec:
     spec:
       chart: mongodb
       sourceRef:
-        kind: OCIRepository
+        kind: HelmRepository
         name: bitnami-mongodb
         namespace: flux-system
   interval: 1m
