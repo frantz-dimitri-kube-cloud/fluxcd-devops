@@ -6,5 +6,3 @@ metadata:
 spec:
   interval: 1h
   url: oci://registry-1.docker.io/bitnamicharts/mongodb
-  ref:
-    semver: "18.x.x"

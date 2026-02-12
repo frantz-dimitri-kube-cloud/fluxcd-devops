@@ -8,6 +8,7 @@ spec:
   chart:
     spec:
       chart: mongodb
+      version: "18.x.x"
       sourceRef:
         kind: HelmRepository
         name: bitnami-mongodb
