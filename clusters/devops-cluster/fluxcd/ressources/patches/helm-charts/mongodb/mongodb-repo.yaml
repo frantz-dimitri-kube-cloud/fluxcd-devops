@@ -1,4 +1,4 @@
-apiVersion: source.toolkit.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: bitnami-mongodb
@@ -9,4 +9,3 @@ spec:
   type: "oci"
   secretRef:
     name: flux-docker-hub
-    namespace: flux-system
