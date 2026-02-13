@@ -5,7 +5,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  url: oci://registry-1.docker.io/bitnamicharts
+  # url: oci://registry-1.docker.io/bitnamicharts
+  url: oci://public.ecr.aws/bitnami
   type: "oci"
   secretRef:
-    name: flux-docker-hub
+    name: flux-docker-hub-token
