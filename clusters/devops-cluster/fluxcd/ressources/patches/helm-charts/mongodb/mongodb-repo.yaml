@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  url: oci://registry-1.docker.io/bitnamicharts/mongodb
+  url: oci://registry-1.docker.io/bitnamicharts
   type: "oci"
   secretRef:
     name: flux-docker-hub
