@@ -26,5 +26,5 @@ spec:
               name: my-mongo-mongodb
             patch: |
               - op: replace
-                path: /spec/template/spec/containers/0/imagePullPolicy
-                value: Always
+                path: /spec/template/spec/replicas
+                value: 2
