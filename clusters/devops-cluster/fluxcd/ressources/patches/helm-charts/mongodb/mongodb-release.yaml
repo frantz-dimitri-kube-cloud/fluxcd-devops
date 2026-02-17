@@ -20,7 +20,7 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: mongodb-custom-values
-      valuesKey: custom-values.yaml
+      # valuesKey: custom-values.yaml
 
   postRenderers:
     - kustomize:

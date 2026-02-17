@@ -8,4 +8,4 @@ resources:
 configMapGenerator:
   - name: mongodb-custom-values
     files:
-      - custom-values.yaml=./values.yaml # On pointe vers ton fichier
+      - values.yaml # On pointe vers ton fichier
