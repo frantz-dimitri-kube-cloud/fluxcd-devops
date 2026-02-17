@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-custom-values
+  namespace: flux-system
+data:
+  architecture: "standalone"
+  image: |
+    tag: latest
+    pullPolicy: IfNotPresent
+  auth: |
+    enabled: true
+    rootPassword: "secretPassword123"
+    database: "todolist_db"
+    username: "frantz"
+    password: "frantzPassword123"
+  persistence: |
+    enabled: true
+    size: 2Gi
+    storageClass: "standard" # C'est ici qu'on fait l'affectation
+  service: |
+    type: ClusterIP
+    port: 27017
